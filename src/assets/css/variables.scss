@@ -1,0 +1,311 @@
+// Color system
+
+$white: #fefefe;
+$gray-100: #f4f4f7;
+$gray-200: #f1f4f6;
+$gray-300: #e5e5e5;
+$gray-400: #cfcfcf;
+$gray-500: #cccccc;
+$gray-600: #a3a3a3;
+$gray-700: #908d8d;
+$gray-800: #79797b;
+$gray-900: #464646;
+$black: #454a56;
+
+$grays: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$blue: #3c70d5;
+$dark-blue: #365CB5;
+$light-blue: #e9eefa;
+$indigo:  #416DD5;
+$purple:  #6D86C5;
+$pink: #e83e8c;
+$red: #fe7788;
+$orange: #fa9640;
+$yellow: #F6B600;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue": $blue,
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "teal": $teal,
+    "cyan": $cyan,
+    "white": $white,
+    "gray": $gray-600,
+    "gray-dark": $gray-900
+  ),
+  $colors
+);
+
+$primary: $blue !default;
+$secondary: $gray-300;
+$success: $green !default;
+$info: $yellow;
+$warning: $orange;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-900;
+
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark
+  ),
+  $theme-colors
+);
+
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$line-height-base: 1.3;
+// stylelint-disable value-keyword-case
+$font-family-manrope: "Manrope";
+
+$font-family-base: $font-family-manrope;
+
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700 !default;
+
+$font-weight-bolder: bolder !default;
+
+$text-muted:                  $gray-600 !default;
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+/*
+    Observed margins and padding in design
+    4px 8px 10px 14px 20px 30px 40px
+*/
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * 0.3),
+    2: ($spacer * 0.65),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 2.14),
+    6: ($spacer * 2.9),
+    7: ($spacer * 3.4),
+  ),
+  $spacers
+);
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $gray-100;
+$body-color:                $gray-900;
+
+$h1-font-size: $font-size-base * 2.3; //32px
+$h2-font-size: $font-size-base * 1.9; //26.6px
+$h3-font-size: $font-size-base * 1.65; //23px
+$h4-font-size: $font-size-base * 1.3;
+$h5-font-size: $font-size-base * 1.15;
+$h6-font-size: $font-size-base;
+
+$headings-margin-bottom: ($spacer * 1.4) / 2;
+$headings-font-family: null !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.3;
+$headings-color: null !default;
+
+// $enable-shadows: false;
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom: 0px;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg: 1.3;
+$line-height-sm: 1.3;
+
+$border-width: 1px !default;
+$border-color: $gray-300 !default;
+
+$border-radius: 0.3rem; //4px
+$border-radius-lg: 0.8rem; //
+$border-radius-sm: 0.2rem; //
+
+$component-active-color:      $white !default;
+$component-active-bg:         $primary !default;
+
+$rounded-pill: 50rem !default;
+
+$box-shadow-sm: 0 0.125rem 0.25rem $gray-400;
+$box-shadow: 0 0.2rem 0.57rem $gray-400;
+$box-shadow-lg: 0 1rem 3rem $gray-400;
+
+// Cards
+
+$card-border-radius: $border-radius-lg;
+$card-border-color: $gray-100;
+$card-spacer-y: 0.6rem;
+$card-spacer-x: 0.8rem;
+$card-border-width: 0px;
+$card-border-radius: $border-radius-lg;
+$card-cap-bg: $gray-200;
+$card-cap-color: $dark;
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding:          map-get($spacers, 4);
+$table-cell-padding-sm:       map-get($spacers, 2);
+
+$table-color:                 $body-color !default;
+$table-bg:                    null !default;
+$table-accent-bg:             $gray-200;
+$table-hover-color:           $table-color !default;
+$table-hover-bg:              rgba($black, .075) !default;
+$table-active-bg:             $table-hover-bg !default;
+
+$table-border-width:          0;
+$table-border-color:          $gray-800;
+
+$table-head-bg:               $gray-200 !default;
+$table-head-color:            $gray-700 !default;
+
+$table-dark-color:            $white !default;
+$table-dark-bg:               $gray-800 !default;
+$table-dark-accent-bg:        rgba($white, .05) !default;
+$table-dark-hover-color:      $table-dark-color !default;
+$table-dark-hover-bg:         rgba($white, .075) !default;
+$table-dark-border-color:     lighten($table-dark-bg, 7.5%) !default;
+
+$table-striped-order:         even;
+
+$table-caption-color:         $text-muted !default;
+
+$table-bg-level:              -9 !default;
+$table-border-level:          -6 !default;
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         .79rem;
+$input-btn-padding-x:         1rem;
+$input-btn-font-family:       null !default;
+
+$input-btn-focus-width:       .2rem !default;
+$input-btn-focus-color:       $gray-100;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+$input-btn-padding-y-sm:      .25rem !default;
+$input-btn-padding-x-sm:      .5rem !default;
+$input-btn-font-size-sm:      $font-size-sm !default;
+$input-btn-line-height-sm:    $line-height-sm !default;
+
+$input-btn-padding-y-lg:      .5rem !default;
+$input-btn-padding-x-lg:      1rem !default;
+$input-btn-font-size-lg:      $font-size-lg !default;
+$input-btn-line-height-lg:    $line-height-lg !default;
+
+$input-btn-border-width:      $border-width !default;
+//Forms
+$input-color: $gray-600;
+$input-border-color: $gray-300;
+$input-box-shadow: null;
+
+// Badges
+$badge-font-size: 80%;
+$badge-font-weight: $font-weight-semibold;
+$badge-border-radius: $border-radius-lg;
+
+
+// Navs
+
+$nav-link-padding-y:                1rem;
+$nav-link-padding-x:                2rem;
+$nav-link-disabled-color:           $gray-600 !default;
+
+$nav-tabs-border-color:             $gray-300;
+$nav-tabs-border-width:             $border-width * 2;
+$nav-tabs-border-radius:            $border-radius !default;
+$nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !default;
+$nav-tabs-link-active-color:        $gray-900;
+$nav-tabs-link-active-bg:           $body-bg;
+$nav-tabs-link-active-border-color: $gray-100 $gray-100 $primary;
+
+
+$nav-divider-color:                 $gray-200 !default;
+$nav-divider-margin-y:              $spacer;
+
+
+// Navbar
+
+$navbar-padding-y:                  $spacer;
+$navbar-padding-x:                  $spacer !default;
+
+$navbar-nav-link-padding-x:         2rem;
+
+$navbar-brand-font-size:            $font-size-base;
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+$nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
+$navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
+$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2 !default;
+
+$navbar-toggler-padding-y:          .25rem !default;
+$navbar-toggler-padding-x:          .75rem !default;
+$navbar-toggler-font-size:          $font-size-base;
+$navbar-toggler-border-radius:      $spacer * 0.3;
