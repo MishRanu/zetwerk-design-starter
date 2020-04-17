@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/css/variables";
+
+// required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+//Optional
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities";
+
+// components
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/buttons";
+
+@import "~bootstrap/scss/bootstrap";
+html,
+body {
+  font-family: sans-serif;
+}
+
